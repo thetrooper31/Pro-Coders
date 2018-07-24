@@ -7,11 +7,11 @@
   <title></title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+  <script src="js/vendor/jquery-3.3.1.min.js"></script>
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
-
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/fontawesome-all.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald|PT+Sans" rel="stylesheet"> 
@@ -45,24 +45,23 @@
     </div> <!--hero-->
   </header>
 
-  <div class="barra">
-    <div class="contenedor">
-      <div class="logo">
-        <img src="#">
+  
+  <nav class="navbar navbar-expand-lg navbar-light barra">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="#">Features</a>
+        <a class="nav-item nav-link" href="#">Pricing</a>
+        <a class="nav-item nav-link disabled" href="#">Disabled</a>
       </div>
-      <div class="menu-movil">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <nav class="navegacion-principal">
-        <a href="">Conferencia</a>
-        <a href="">Calendario</a>
-        <a href="">Invitados</a>
-        <a href="">Reservas</a>
-      </nav>
     </div>
-  </div>
+  </nav>
+
+ 
 
 
 
@@ -72,6 +71,7 @@
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/bootstrap.min.js"></script>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
@@ -82,3 +82,23 @@
 </body>
 
 </html>
+
+
+<!-- <div class="barra">
+  <div class="contenedor">
+    <div class="logo">
+      <img src="#">
+    </div>
+    <div class="menu-movil">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav class="navegacion-principal">
+      <a href="">Conferencia</a>
+      <a href="">Calendario</a>
+      <a href="">Invitados</a>
+      <a href="">Reservas</a>
+    </nav>
+  </div>
+</div> -->
