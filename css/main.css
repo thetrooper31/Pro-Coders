@@ -125,7 +125,7 @@ div.hero {
 div.contenido-header {
     padding-top: 40px;
 }
-@media only screen and (min-width:768px) {
+@media only screen and (min-width:768px) {/*media queries redes sociales pagina responsive*/ 
     div.contenido-header {
         padding-top: 10px;
     }
@@ -133,7 +133,7 @@ div.contenido-header {
 nav.redes-sociales {
     text-align: center;
 }
-nav.redes-sociales a {
+nav.redes-sociales a {/*estilos redes sociales*/ 
     color: #ffffff;
     font-size: 2em;
     margin-right: 20px;
@@ -145,7 +145,7 @@ div.informacion-evento {
     text-align: center;
     color: #ffffff;
 }
-@media only screen and (min-width:768px) {
+@media only screen and (min-width:768px) { /*media queries nombre pagina responsive*/ 
     div.informacion-evento {
         width: 70%;
         margin: 0 auto;
@@ -153,13 +153,12 @@ div.informacion-evento {
     }
 }
 div.informacion-evento p {
-
     margin:0;
     display: inline;
     font-size: 20px;
     text-transform: uppercase;
 }
-div.informacion-evento p i { 
+div.informacion-evento p i { /*estilos iconos*/ 
     color: #fe4918;
     font-size: 2.4rem;
 }
@@ -172,9 +171,7 @@ p.ciudad {
 }
 h1.nombre-sitio {
     font-family: 'PT Sans', sans-serif;
-    font-size: 5.9vw;
-   
-    
+    font-size: 5.9vw;   
 }
 p.slogan {
     text-transform: none!important;
@@ -182,7 +179,7 @@ p.slogan {
 p.slogan span {
     font-weight: bold;
 }
-@media only screen and (min-width:768px) {
+@media only screen and (min-width:768px) { /*media queries nombre pagina responsive*/ 
     h1.nombre-sitio {
         font-size: 10vw;
         margin: 0;
