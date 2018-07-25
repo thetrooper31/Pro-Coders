@@ -32,7 +32,7 @@
           <a href="#"><i class="fab fa-twitter-square"></i></a>
           <a href="#"><i class="fab fa-youtube"></i></a>
           <a href="#"><i class="fab fa-instagram"></i></a>
-        </nav><!--redes-sociales-->
+        </nav><!--cierre-redes-sociales-->
         <div class="informacion-evento">
           <div class="clearfix">
               <p class="ciudad"><i class="fas fa-map-marker-alt"></i>Próximo Madrid</p>
@@ -41,25 +41,86 @@
           <h1 class="nombre-sitio">CodeTour&nbsp; &LT; &sol; &gt;</h1>
           <p class="slogan">Tú página de <span>conferencias web</span></p>
         </div>
-      </div><!--contenido-header-->
-    </div> <!--hero-->
+      </div><!--cierre-contenido-header-->
+    </div> <!--cierre-hero-->
   </header>
 
-  
-  <nav class="navbar navbar-expand-lg navbar-light barra">
-    <a class="navbar-brand" href="#">Navbar</a>
+  <!--==========================================================================
+     NAVBAR                
+   ==========================================================================-->
+  <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark barra">
+    <a class="navbar-brand nombrebarra" href="#">CodeTour&nbsp; &LT; &sol; &gt;</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-        <a class="nav-item nav-link" href="#">Features</a>
-        <a class="nav-item nav-link" href="#">Pricing</a>
-        <a class="nav-item nav-link disabled" href="#">Disabled</a>
+        <a class="nav-item nav-link active" href="#">Conferencia <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="#">Calendario</a>
+        <a class="nav-item nav-link" href="#">Invitados</a>
+        <a class="nav-item nav-link" href="#">Reservas</a>
       </div>
     </div>
   </nav>
+  <!--==========================================================================
+    FIN NAVBAR                
+   ==========================================================================-->
+
+    <!--==========================================================================
+    SECTION                
+   ==========================================================================-->
+
+   <section class="container sectionClass mt-5 mb-5">
+     <h2>La mejor web de conferencias de programación</h2>
+       <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta)</p>     
+   </section> <!--cierre--section--1-->
+
+   <section class="programa">
+      <div class="contenedor-video">
+       <video autoplay loop poster="img/office.jpg">
+         <source src="video/Laptop_-_1625-148614367.mp4" type="video/mp4">
+       </video>
+     </div> <!--cierre--contenedor--video-->
+     <div class="contenido-programa">
+       <div class="contenedor">
+         <div class="programa-evento">
+           <h2>Próximos Eventos</h2>
+           <nav class="menu-programa ml-5 mb-2">
+             <a href="#talleres"><i class="fas fa-code"></i> Talleres</a>
+             <a href="#conferencia"><i class="far fa-comments"></i> Conferencias</a>
+             <a href="#seminario"><i class="fas fa-university"></i> Seminarios</a>
+           </nav>
+
+           <div id="talleres" class="info-curso ocultar clearfix ml-5">
+              <div class="detalle-evento">
+                <h3>HTML, CSS3 Y JavaScript</h3>
+                <p><i class="fas fa-clock mr-3"></i>16:00 hrs</p>
+                <p><i class="fas fa-calendar mr-3"></i>10 de Dic</p>
+                <p><i class="fas fa-user mr-3"></i>Juan Pablo De la torre</p>
+              </div>
+           </div><!--cierre--primer--evento-->
+           <div id="talleres" class="infoCurso ocultar clearfix ml-5">
+              <div class=" detalle-evento">
+                <h3>Angular</h3>
+                <p><i class="fas fa-clock mr-3"></i>16:00 hrs</p>
+                <p><i class="fas fa-calendar mr-3"></i>10 de Dic</p>
+                <p><i class="fas fa-user mr-3"></i>Juan Pablo De la torre</p>
+              </div>
+              <a href="#" class="button float-left">Ver todos</a> 
+           </div><!--cierre--segundo--evento-->
+
+         </div>
+       </div>
+      </div>
+   </section> <!--cierre--section--2-->
+
+   
+
+
+
+   <!--==========================================================================
+    FIN SECTION                
+   ==========================================================================-->
 
  
 
@@ -83,22 +144,3 @@
 
 </html>
 
-
-<!-- <div class="barra">
-  <div class="contenedor">
-    <div class="logo">
-      <img src="#">
-    </div>
-    <div class="menu-movil">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <nav class="navegacion-principal">
-      <a href="">Conferencia</a>
-      <a href="">Calendario</a>
-      <a href="">Invitados</a>
-      <a href="">Reservas</a>
-    </nav>
-  </div>
-</div> -->

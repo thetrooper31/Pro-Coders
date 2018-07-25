@@ -11,9 +11,9 @@
    ========================================================================== */
 
 html {
-    color: #222;
-    font-size: 1em;
-    line-height: 1.4;
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
 }
 
 /*
@@ -27,13 +27,13 @@ html {
  */
 
 ::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
+  background: #b3d4fc;
+  text-shadow: none;
 }
 
 ::selection {
-    background: #b3d4fc;
-    text-shadow: none;
+  background: #b3d4fc;
+  text-shadow: none;
 }
 
 /*
@@ -41,12 +41,12 @@ html {
  */
 
 hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
 }
 
 /*
@@ -61,7 +61,7 @@ iframe,
 img,
 svg,
 video {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 /*
@@ -69,9 +69,9 @@ video {
  */
 
 fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
+  border: 0;
+  margin: 0;
+  padding: 0;
 }
 
 /*
@@ -79,7 +79,7 @@ fieldset {
  */
 
 textarea {
-    resize: vertical;
+  resize: vertical;
 }
 
 /* ==========================================================================
@@ -87,150 +87,225 @@ textarea {
    ========================================================================== */
 
 .browserupgrade {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
 }
-
-
 
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
 
-   /* ==========================================================================
+/* ==========================================================================
    ESTILOS GLOBALES
    ========================================================================== */
 
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
+}
 
+*,
+*:before,
+*:after {
+  /*propiedad que nos permite cambiar el modelo de caja y ajustarlo a nuestras necesidades*/
+  box-sizing: inherit;
 }
-*,*:before,*:after { /*propiedad que nos permite cambiar el modelo de caja y ajustarlo a nuestras necesidades*/
-    box-sizing: inherit;
-}
+
 body {
-    background-color: #f2f2f2;
-    font-family: 'Open Sans', sans-serif;
+  background-color: #f2f2f2;
+  font-family: 'Open Sans', sans-serif;
 }
+
 h2 {
-    font-family: 'Oswald', sans-serif;
+  font-family: 'Oswald', sans-serif;
 }
- /* ==========================================================================
+
+/* ==========================================================================
    FIN ESTILOS GLOBALES
    ========================================================================== */
-
-
 
 /* ==========================================================================
    HEADER                 
    ========================================================================== */
 
 div.hero {
-    background-image: url(../img/coding1.jpg);
-    height: 100vh;
-    background-position: top center;
-    background-size: cover;
+  background-image: url(../img/coding1.jpg);
+  height: 100vh;
+  background-position: top center;
+  background-size: cover;
 }
+
 div.contenido-header {
-    padding-top: 40px;
+  padding-top: 40px;
 }
-@media only screen and (min-width:768px) {/*media queries redes sociales pagina responsive*/ 
-    div.contenido-header {
-        padding-top: 10px;
-    }
+
+@media only screen and (min-width:768px) {
+  /*media queries redes sociales pagina responsive*/
+  div.contenido-header {
+    padding-top: 10px;
+  }
 }
+
 nav.redes-sociales {
-    text-align: center;
+  text-align: center;
 }
-nav.redes-sociales a {/*estilos redes sociales*/ 
-    color: #ffffff;
-    font-size: 2em;
-    margin-right: 20px;
+
+nav.redes-sociales a {
+  /*estilos redes sociales*/
+  color: #ffffff;
+  font-size: 2em;
+  margin-right: 20px;
 }
-nav.redes-sociales a:last-child{
-    margin-right: 0;
+
+nav.redes-sociales a:last-child {
+  margin-right: 0;
 }
+
 div.informacion-evento {
-    text-align: center;
-    color: #ffffff;
+  text-align: center;
+  color: #ffffff;
 }
-@media only screen and (min-width:768px) { /*media queries nombre pagina responsive*/ 
-    div.informacion-evento {
-        width: 70%;
-        margin: 0 auto;
-        margin-top: 50px;
-    }
+
+@media only screen and (min-width:768px) {
+  /*media queries nombre pagina responsive*/
+  div.informacion-evento {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
 }
+
 div.informacion-evento p {
-    margin:0;
-    display: inline;
-    font-size: 20px;
-    text-transform: uppercase;
+  margin: 0;
+  display: inline;
+  font-size: 20px;
+  text-transform: uppercase;
 }
-div.informacion-evento p i { /*estilos iconos*/ 
-    color: #fe4918;
-    font-size: 2.0rem;
+
+div.informacion-evento p i {
+  /*estilos iconos*/
+  color: #fe4918;
+  font-size: 2.0rem;
 }
+
 p.fecha {
-    float: right;    
+  float: right;
 }
+
 p.ciudad {
-    float: left;
-    text-align: left;
+  float: left;
+  text-align: left;
 }
+
 h1.nombre-sitio {
-    font-family: 'PT Sans', sans-serif;
-    font-size: 5.9vw;   
+  font-family: 'PT Sans', sans-serif;
+  font-size: 5.9vw;
 }
+
 p.slogan {
-    text-transform: none!important;
+  text-transform: none !important;
 }
+
 p.slogan span {
-    font-weight: bold;
+  font-weight: bold;
 }
-@media only screen and (min-width:768px) { /*media queries nombre pagina responsive*/ 
-    h1.nombre-sitio {
-        font-size: 10vw;
-        margin: 0;
-        line-height: 1;       
-    }
+
+@media only screen and (min-width:768px) {
+  /*media queries nombre pagina responsive*/
+  h1.nombre-sitio {
+    font-size: 10vw;
+    margin: 0;
+    line-height: 1;
+  }
 }
+
 /* ==========================================================================
    ESTILOS NAVBAR 
    ========================================================================== */
-   .barra {
-       background-color: #353535;
-       height: 100px;
 
-   }
+.barra {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.5em;
+  
+}
 
-
+.nombrebarra {
+  font-size: 1.8em;
+}
 
 /* ==========================================================================
     FIN ESTILOS NAVBAR                
    ========================================================================== */
 
+/* ==========================================================================
+    ESTILOS SECTION                
+   ========================================================================== */
 
+h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  text-align: center;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+h2::after {
+  content: '';
+  margin: 0 auto;
+  background-image: url(../img/separador.png);
+  height: 30px;
+  width: 100px;
+  display: block;
+  ;
+}
+.sectionClass p {
+    font-size: 1.2em;
+    text-align: center;
+}
+section.programa {
+    position: relative;
+}
+div.contenedor-video {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+div.contenedor-video video {
+    width: 100%;
+    
+}
+div.contenido-programa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+div.programa-evento {
+    background-color: rgba(255, 255, 255, .8);
+    
+}
 
 /* ==========================================================================
-   Helper classes
+   ESTILOS MENU PROGRAMA
+   ========================================================================== */
+nav.menu-programa {
+    width: 100%;
+    border-bottom: 1px solid #fe4918;
+    padding-bottom: 5px;
+}
+nav.menu-programa a {
+        
+    color: #000000;
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.4em;
+}
+nav.menu-programa a i {
+    color: #fe4918;
+    font-size: 1.5em;
+}
+   /* ==========================================================================
+   FIN ESTILOS MENU EVENTOS
    ========================================================================== */
 
 /*
@@ -238,7 +313,7 @@ p.slogan span {
  */
 
 .hidden {
-    display: none !important;
+  display: none !important;
 }
 
 /*
@@ -251,15 +326,16 @@ p.slogan span {
  */
 
 .visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-    white-space: nowrap; /* 1 */
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+  /* 1 */
 }
 
 /*
@@ -270,13 +346,13 @@ p.slogan span {
 
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-    white-space: inherit;
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+  white-space: inherit;
 }
 
 /*
@@ -284,7 +360,7 @@ p.slogan span {
  */
 
 .invisible {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 /*
@@ -301,12 +377,14 @@ p.slogan span {
 
 .clearfix:before,
 .clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
 }
 
 .clearfix:after {
-    clear: both;
+  clear: both;
 }
 
 /* ==========================================================================
@@ -316,14 +394,14 @@ p.slogan span {
    ========================================================================== */
 
 @media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
+  /* Style adjustments for viewports that meet the condition */
 }
 
 @media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
 }
 
 /* ==========================================================================
@@ -333,71 +411,61 @@ p.slogan span {
    ========================================================================== */
 
 @media print {
-    *,
-    *:before,
-    *:after {
-        background: transparent !important;
-        color: #000 !important; /* Black prints faster */
-        -webkit-box-shadow: none !important;
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
-
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
-
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
-
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-
-    /*
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster */
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  /*
      * Don't show links that are fragment identifiers,
      * or use the `javascript:` pseudo protocol
      */
-
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
-    }
-
-    pre {
-        white-space: pre-wrap !important;
-    }
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-
-    /*
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+  pre {
+    white-space: pre-wrap !important;
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  /*
      * Printing Tables:
      * http://css-discuss.incutio.com/wiki/Printing_Tables
      */
-
-    thead {
-        display: table-header-group;
-    }
-
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
 }
