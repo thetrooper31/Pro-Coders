@@ -205,6 +205,7 @@ section.programa {
 div.contenedor-video {
     max-width: 100%;
     overflow-x: hidden;
+    height: 70%;
 }
 /* div.contenedor-video video {
     width: 100%;
@@ -225,11 +226,11 @@ div.programa-evento {
 /* ==========================================================================
    ESTILOS MENU PROGRAMA
    ========================================================================== */
-nav.menu-programa {
+/* nav.menu-programa {
     width: 26%;
     border-bottom: 2px solid #fe4918;
     padding-bottom: 5px;
-}
+} */
 nav.menu-programa a {        
     color: #000000;
     text-decoration: none;
