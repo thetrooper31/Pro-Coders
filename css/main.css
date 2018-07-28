@@ -266,10 +266,59 @@ h3 {
   background-color: #e33000;
   text-decoration: none;
 }
+.dummy_page {
+  height: 100px;
+  width: 100%;
+  background-color: #f0f0f0;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 60px 0px;
+}
 
    /* ==========================================================================
    FIN ESTILOS MENU EVENTOS
    ========================================================================== */
+
+    /* ==========================================================================
+    ESTILOS INVITADOS
+   ========================================================================== */
+.textoInvitados {  
+  font-family: 'Oswald', sans-serif;
+  /* font-weight: bold; */
+  font-size: 1.5em;
+  color: #e33000;
+  text-transform: uppercase;
+  
+}
+.textoInvitados2 { 
+  background-color: #b0a7a7;
+}
+ 
+.spanText {
+  color: #e33000;
+}
+.imgClass {
+  filter: gray;
+  -webkit-filter: grayscale(1);
+  -webkit-transition: all .5s ease-in-out;
+
+}
+.imgClass:hover {
+  -webkit-filter: grayscale(0);
+  -webkit-transform: scale(1.1);
+
+}
+
+
+
+
+
+    /* ==========================================================================
+    FIN ESTILOS INVITADOS
+   ========================================================================== */
+
+
+
 
 /*
  * Hide visually and from screen readers
