@@ -4,12 +4,8 @@
 
 
 
-/*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
 
+/* 
 audio,
 canvas,
 iframe,
@@ -27,7 +23,7 @@ fieldset {
   border: 0;
   margin: 0;
   padding: 0;
-}
+} */
 
 /*
  * Allow only vertical resizing of textareas.
@@ -127,6 +123,7 @@ div.informacion-evento p i {
 
 p.fecha {
   float: right;
+  
 }
 
 p.ciudad {
@@ -141,6 +138,7 @@ h1.nombre-sitio {
 
 p.slogan {
   text-transform: none !important;
+
 }
 
 p.slogan span {
@@ -331,6 +329,8 @@ h3 {
   background-size: cover;
   background-position: center center;
   background-attachment: fixed; /*efecto fondo foto */
+  -webkit-filter: brightness(.8);
+  filter: brightness(.8);
 }
 div.contador {
   position: relative;
