@@ -303,6 +303,7 @@ h3 {
   filter: gray;
   -webkit-filter: grayscale(1);
   -webkit-transition: all .5s ease-in-out;
+  border: 3px solid #ddd;
 
 }
 .imgClass:hover {
