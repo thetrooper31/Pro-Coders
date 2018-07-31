@@ -288,16 +288,14 @@ h3 {
   /* font-weight: bold; */
   font-size: 1.5em;
   color: #2d46d2;
-  text-transform: uppercase;
-  
+  text-transform: uppercase;  
 }
 .textoInvitados2 { 
   background-color: #b0a7a7;
 }
  
 .spanText {
-  color: #2d46d2;
-  
+  color: #2d46d2;  
 }
 .imgClass {
   filter: gray;
@@ -309,13 +307,11 @@ h3 {
 .imgClass:hover {
   -webkit-filter: grayscale(0);
   -webkit-transform: scale(1.1);
-
 }
 
  /* ==========================================================================
     FIN ESTILOS INVITADOS
  ========================================================================== */
-
 
  /* ==========================================================================
     ESTILOS DEL CONTADOR
@@ -354,27 +350,24 @@ ul.resumen-evento li {
   font-family: 'Oswald', sans-serif;
   font-size: 25px;
   list-style:none;
-
 }
 @media only screen and (min-width:768px){
   ul.resumen-evento li {
     width: 25%;
   }
-
 }
 p.numero {
   font-size: 4em;
   display: block;
-  margin: 0 0 10px 0;
-  
+  margin: 0 0 10px 0;  
 }
 
 
-    /* ==========================================================================
+  /* ==========================================================================
     FIN ESTILOS DEL CONTADOR
    ========================================================================== */
 
-      /* ==========================================================================
+ /* ==========================================================================
   ESTILOS PRECIOS
    ========================================================================== */
 .classPrecio {
@@ -397,11 +390,144 @@ p.numero {
   transition: all .5s ease;
   box-shadow: 0px 0px 50px #666;
 }
+.checkclass {
+  color: green;
+}
 
-
-      /* ==========================================================================
+  /* ==========================================================================
     FIN ESTILOS PRECIOS
    ========================================================================== */
+
+  /* ==========================================================================
+  ESTILOS REGISTRO
+   ========================================================================== */
+div.newsletter {
+  position: relative;
+  height: auto;
+}
+div.newsletter::before {
+  background-image: url(../img/bg-newsletter.jpg);
+  content: '';
+}
+div.newsletter .contenido {
+  padding: 100px 0;
+  color: #ffffff;
+  text-align: center;
+  position: relative;
+}
+div.newsletter .contenido p {
+  font-size: 1.2em;  
+  /* text-transform: lowercase; */
+}
+div.newsletter .contenido h3 {
+  color: #ffffff;
+  /* text-transform: uppercase; */
+  font-size: 7vw;
+  font-family: 'PT Sans', sans-serif;
+}
+.button.hollow,
+.button.hollow:hover {
+  background-color: white;
+  color: #2d46d2;
+}
+.button.transparente {
+  background-color: transparent;
+  font-size: 1.3em;
+  border: 2px solid #ffffff;
+}
+  /* ==========================================================================
+  FIN ESTILOS REGISTRO
+   ========================================================================== */
+
+     /* ==========================================================================
+  ESTILOS FOOTER
+   ========================================================================== */
+
+footer {
+  background-color: #353535;
+  padding-top: 40px;
+  /* margin-top: 20px;   */
+} 
+footer .contenedor > div {
+  color: #ffffff;
+  padding: 0px 20px;
+  font-size: 12px;
+  
+}
+@media only screen and (min-width:768px) {
+  footer .contenedor > div {
+    width: 33.3%;
+    float: left;
+  }
+}
+
+footer h3 {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  margin-bottom: 20px;
+}
+footer h3 span {
+  color: #2d46d2;
+}
+footer nav.redes-sociales {
+  text-align: left;
+}
+footer .ultimos-tweets li {
+  margin-bottom: 10px;
+  text-align: left;
+  list-style: none;
+}
+.copyright {
+  background-color: #2e2e2e;
+  color: #ffffff;
+  padding: 10px 0;
+  text-align: center;
+  margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
    
