@@ -521,6 +521,7 @@ div.campo {
 }
 .contenido-dia {
   padding: 20px;
+  display: none;
 }
 @media only screen and (min-width:768px) {
 .contenido-dia > div {
@@ -568,8 +569,22 @@ div.extras div.orden {
 div.extras div.orden input {
   margin: 10px 0 0 0;
 }
+#lista-productos {
+  background-color: #e1e1e1;
+  width: 580px;
+  height: 120px;
+}
+#suma-total {
+  font-size: 1.5em;
+  color: #2d46d2;
+}
+/* .ptotal {
+  text-align: center;
+} */
 
-
+.total {
+  height: 330px;
+}
 
 
 
