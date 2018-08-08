@@ -1,0 +1,835 @@
+
+
+
+
+
+
+
+/* 
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+} */
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+
+
+
+
+/* ==========================================================================
+   ESTILOS GLOBALES
+   ========================================================================== */
+
+
+
+*,
+*:before,
+*:after {
+  /*propiedad que nos permite cambiar el modelo de caja y ajustarlo a nuestras necesidades*/
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #f2f2f2;
+  font-family: 'Open Sans', sans-serif;
+}
+h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h3 {
+  font-size: 2.0em;
+  font-family: 'PT Sans', sans-serif;
+  text-align: center;
+  color: #2d46d2;
+}
+
+/* ==========================================================================
+   FIN ESTILOS GLOBALES
+   ========================================================================== */
+
+/* ==========================================================================
+   HEADER                 
+   ========================================================================== */
+
+div.hero {
+  background-image: url(../img/coding1.jpg);
+  height: 100vh;
+  background-position: top center;
+  background-size: cover;
+}
+
+div.contenido-header {
+  padding-top: 40px;
+}
+
+@media only screen and (min-width:768px) {
+  /*media queries redes sociales pagina responsive*/
+  div.contenido-header {
+    padding-top: 10px;
+  }
+}
+
+nav.redes-sociales {
+  text-align: center;
+}
+
+nav.redes-sociales a {
+  /*estilos redes sociales*/
+  color: #ffffff;
+  font-size: 2em;
+  margin-right: 20px;
+}
+
+nav.redes-sociales a:last-child {
+  margin-right: 0;
+}
+
+div.informacion-evento {
+  text-align: center;
+  color: #ffffff;
+}
+
+@media only screen and (min-width:768px) {
+  /*media queries nombre pagina responsive*/
+  div.informacion-evento {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+}
+
+div.informacion-evento p {
+  margin: 0;
+  display: inline;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+div.informacion-evento p i {  
+  font-size: 2.0rem;
+}
+
+p.fecha {
+  float: right;
+  
+}
+
+p.ciudad {
+  float: left;
+  text-align: left;
+}
+
+h1.nombre-sitio {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 5.9vw;
+}
+
+p.slogan {
+  text-transform: none !important;
+
+}
+
+p.slogan span {
+  font-weight: bold;
+}
+
+@media only screen and (min-width:768px) {
+  /*media queries nombre pagina responsive*/
+  h1.nombre-sitio {
+    font-size: 10vw;
+    margin: 0;
+    line-height: 1;
+  }
+}
+
+/* ==========================================================================
+   ESTILOS NAVBAR 
+   ========================================================================== */
+
+.barra {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.5em;
+  
+}
+
+.nombrebarra {
+  font-size: 1.8em;
+}
+
+/* ==========================================================================
+    FIN ESTILOS NAVBAR                
+   ========================================================================== */
+
+/* ==========================================================================
+    ESTILOS SECTION                
+   ========================================================================== */
+
+
+
+
+h2::after {
+  content: '';
+  margin: 0 auto;
+  background-image: url(../img/separador.png);
+  height: 30px;
+  width: 100px;
+  display: block;
+  ;
+}
+.sectionClass p {
+    font-size: 1.2em;
+    text-align: center;
+}
+section.programa {
+    position: relative;
+}
+div.contenedor-video {
+    max-width: 100%;
+    overflow-x: hidden;
+   
+}
+/* div.contenedor-video video {
+    width: 100%;
+    
+} */
+div.contenido-programa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+nav.menu-programa {
+  width: 100%;
+  border-bottom: 1px solid #2d46d2;
+  padding-bottom: 10px;
+}
+div.programa-evento {
+    background-color: rgba(255, 255, 255, .8); 
+    padding: 15px; 
+}
+@media only screen and (min-width:768px) {
+  div.programa-evento{
+    width: 70%;
+  }
+}
+@media only screen and (min-width:992px) {
+  div.programa-evento{
+    width: 50%;
+  }
+}
+@media only screen and (min-width:768px) {
+  nav.menu-programa {
+    display: table;
+  }
+}
+@media only screen and (min-width:768px) {
+      nav.menu-programa a {
+        display: table-cell;
+      }
+    }
+/* ==========================================================================
+    ESTILOS SECTION                
+   ========================================================================== */
+
+/* ==========================================================================
+   ESTILOS MENU PROGRAMA
+   ========================================================================== */
+
+nav.menu-programa {
+    width: 96.5%;
+    border-bottom: 2px solid #2d46d2;
+    padding-bottom: 5px;
+}
+nav.menu-programa a {        
+    color: #000000;
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.4em;
+    text-align: center;
+}
+nav.menu-programa a i {
+    color: #2d46d2;
+    font-size: 1.5em;
+}
+div.detalle-evento p {
+  font-size: 20px;
+}
+div.detalle-evento p i {
+  color: #2d46d2;
+}
+
+.button {
+  background-color: #2d46d2;
+  padding: 10px 40px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: 'Oswald', sans-serif;
+  text-decoration: none;
+  font-size: 1em;
+  margin-top: 20px;
+}
+.button:hover {
+  background-color: #2d46d2;
+  text-decoration: none;
+}
+.dummy_page {
+  height: 100px;
+  width: 100%;
+  background-color: #f0f0f0;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 60px 0px;
+}
+
+   /* ==========================================================================
+   FIN ESTILOS MENU EVENTOS
+   ========================================================================== */
+
+  /* ==========================================================================
+    ESTILOS INVITADOS
+  ========================================================================== */
+
+.textoInvitados {  
+  font-family: 'Oswald', sans-serif;
+  /* font-weight: bold; */
+  font-size: 1.5em;
+  color: #2d46d2;
+  text-transform: uppercase;  
+}
+.textoInvitados2 { 
+  background-color: #b0a7a7;
+}
+ 
+.spanText {
+  color: #2d46d2;  
+}
+.imgClass {
+  filter: gray;
+  -webkit-filter: grayscale(1);
+  -webkit-transition: all .5s ease-in-out;
+  border: 3px solid #ddd;
+
+}
+.imgClass:hover {
+  -webkit-filter: grayscale(0);
+  -webkit-transform: scale(1.1);
+}
+
+ /* ==========================================================================
+    FIN ESTILOS INVITADOS
+ ========================================================================== */
+
+ /* ==========================================================================
+    ESTILOS DEL CONTADOR
+ ========================================================================== */
+.parallax::before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed; /*efecto fondo foto */
+  -webkit-filter: brightness(.8);
+  filter: brightness(.8);
+}
+div.contador {
+  position: relative;
+  height: auto;  
+}
+div.contador::before {
+  background-image: url(../img/conference1.jpg);
+  content: '';
+}
+ul.resumen-evento {
+  position: relative;
+  padding: 120px 0;  
+}
+ul.resumen-evento li {
+  width: 50%;
+  float: left;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  font-size: 25px;
+  list-style:none;
+}
+@media only screen and (min-width:768px){
+  ul.resumen-evento li {
+    width: 25%;
+  }
+}
+p.numero {
+  font-size: 4em;
+  display: block;
+  margin: 0 0 10px 0;  
+}
+
+
+  /* ==========================================================================
+    FIN ESTILOS DEL CONTADOR
+   ========================================================================== */
+
+ /* ==========================================================================
+  ESTILOS PRECIOS
+   ========================================================================== */
+.classPrecio {
+  font-size: 4em;
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+  color: #2d46d2;
+}
+.btnprecio {
+  font-weight: bold;    
+}
+.pasesclass {
+  color: #2d46d2;
+  font-family: 'Oswald', sans-serif;
+  font-size: 2em;
+}
+.classcard:hover {
+  transform: scale(1.05);
+  border: 2px solid #2d46d2;
+  transition: all .5s ease;
+  box-shadow: 0px 0px 50px #666;
+}
+.checkclass {
+  color: green;
+}
+
+  /* ==========================================================================
+    FIN ESTILOS PRECIOS
+   ========================================================================== */
+
+  /* ==========================================================================
+  ESTILOS REGISTRO
+   ========================================================================== */
+div.newsletter {
+  position: relative;
+  height: auto;
+}
+div.newsletter::before {
+  background-image: url(../img/bg-newsletter.jpg);
+  content: '';
+}
+div.newsletter .contenido {
+  padding: 100px 0;
+  color: #ffffff;
+  text-align: center;
+  position: relative;
+}
+div.newsletter .contenido p {
+  font-size: 1.2em;  
+  /* text-transform: lowercase; */
+}
+div.newsletter .contenido h3 {
+  color: #ffffff;
+  /* text-transform: uppercase; */
+  font-size: 7vw;
+  font-family: 'PT Sans', sans-serif;
+}
+.button.hollow,
+.button.hollow:hover {
+  background-color: white;
+  color: #2d46d2;
+}
+.button.transparente {
+  background-color: transparent;
+  font-size: 1.3em;
+  border: 2px solid #ffffff;
+}
+  /* ==========================================================================
+  FIN ESTILOS REGISTRO
+   ========================================================================== */
+
+     /* ==========================================================================
+  ESTILOS FOOTER
+   ========================================================================== */
+
+footer {
+  background-color: #353535;
+  padding-top: 40px;
+  /* margin-top: 20px;   */
+} 
+footer .contenedor > div {
+  color: #ffffff;
+  padding: 0px 20px;
+  font-size: 12px;
+  
+}
+@media only screen and (min-width:768px) {
+  footer .contenedor > div {
+    width: 33.3%;
+    float: left;
+  }
+}
+
+footer h3 {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  margin-bottom: 20px;
+}
+footer h3 span {
+  color: #2d46d2;
+}
+footer nav.redes-sociales {
+  text-align: center;
+}
+footer .ultimos-tweets li {
+  margin-bottom: 10px;
+  text-align: left;
+  list-style: none;
+}
+.copyright {
+  background-color: #2e2e2e;
+  color: #ffffff;
+  padding: 10px 0;
+  text-align: center;
+  margin: 0;
+}
+
+ /* ==========================================================================
+  ESTILOS DEL REGISTRO
+   ========================================================================== */
+
+form.registro label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+h4 {
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 2px solid #2d46d2;
+  padding-bottom: 10px;
+  font-size: 1.2em;
+}
+div.caja {
+  background-color:white;
+  border: 1px solid #e1e1e1;
+  padding: 10px;
+  margin: 10px;
+}
+div.campo {
+  padding: 20px;  
+}
+@media only screen and (min-width:768px) {
+  div.campo {
+    float: left;
+    width: 33.3%;
+  }
+}
+.contenido-dia {
+  padding: 20px;
+  display: none;
+}
+@media only screen and (min-width:768px) {
+.contenido-dia > div {
+    float:left;
+  }
+}
+.contenido-dia > div p {
+  text-align: left
+}
+.contenido-dia > div label {
+  display: block;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+.contenido-dia > div input {
+  margin-right: 10px;
+  padding: 40px;
+}
+.contenido-dia > div label time {
+  color: #2d46d2;
+  font-weight: bold;
+}
+#errorDiv {
+  clear: both;
+  padding: 20px;
+  text-align: center;
+  display: none;
+  color: #2d46d2;
+}
+ /* ==========================================================================
+  FIN ESTILOS DEL REGISTRO
+   ========================================================================== */
+
+ /* ==========================================================================
+  ESTILOS RESUMEN COMPRA
+   ========================================================================== */
+
+.resumen p {
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+div.resumen div.extras {
+  float: left;
+  width: 50;
+  padding: 30px;
+}
+div.extras div.orden {
+    text-align: left;
+    margin-bottom: 10px;
+}
+div.extras div.orden input {
+  margin: 10px 0 0 0;
+}
+#lista-productos {
+  background-color: #e1e1e1;
+  width: 580px;
+  height: 120px;
+}
+#suma-total {
+  font-size: 1.5em;
+  color: #2d46d2;
+}
+/* .ptotal {
+  text-align: center;
+} */
+
+.total {
+  height: 330px;
+}
+
+
+
+ /* ==========================================================================
+   ESTILOS MAPA
+   ========================================================================== */
+  div.mapa {
+    height: 420px;
+  }
+
+ /* ==========================================================================
+  FIN ESTILOS MAPA
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+  /* 1 */
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+  white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster */
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+  pre {
+    white-space: pre-wrap !important;
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
