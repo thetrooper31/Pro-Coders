@@ -1,9 +1,8 @@
-
   <?php include_once 'includes/templates/header.php'; ?>
 
    <section class="container sectionClass mt-5 mb-5">
      <h2>La mejor web de conferencias de programación</h2>
-       <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta)</p>
+       <p>Donde encontraras toda la información necesaria: presentadores o ponentes, horarios, reservas, compra, ubicación y todo lo que necesitas saber.</p>
    </section> <!--cierre--section--1-->
 
    <section class="programa">
@@ -16,89 +15,95 @@
        <div class="contenedor">
          <div class="programa-evento">
            <h2>Próximos Eventos</h2>
-           <nav class="menu-programa ml-5 mb-3">
-             <a href="#talleres"><i class="fas fa-code"></i> Talleres</a>
-             <a href="#conferencia"><i class="far fa-comments ml-5"></i> Conferencias</a>
-             <a href="#seminario"><i class="fas fa-university ml-5"></i> Seminarios</a>
-           </nav>
+           
+                <?php
+                try {
+                  require_once('includes/funciones/bd_conexion.php');
+                  $sql = "SELECT * FROM `categoria_evento` ";
+                  $resultado = $conn->query($sql);
+                } catch (Exception $e) {
+                  $error = $e->getMessage();
+                }
+                ?>
+      <nav class="menu-programa">
+         <?php while ($cat = $resultado->fetch_array(MYSQLI_ASSOC)) { ?>
+         <?php $categoria = $cat['cat_evento']; ?>
+         <a href="#<?php echo strtolower($categoria) ?>">
+         <i class="fa <?php echo $cat['icono'] ?>" aria-hidden="true"></i> <?php echo $categoria ?>
+      </a>
+      <?php 
+      } ?>
+      </nav>
 
-           <div id="talleres" class="info-curso ocultar clearfix ml-5">
-              <div class="detalle-evento mt-4">
-                <h2>HTML, CSS3 Y JavaScript</h2>
-                <p><i class="fas fa-clock mr-3 mt-4"></i>16:00 hrs</p>
-                <p><i class="fas fa-calendar mr-3 mt-4"></i>10 de Sept</p>
-                <p><i class="fas fa-user mr-3 mt-4"></i>Juan Pablo De la torre</p>
-              </div>
-           </div><!--cierre--primer--evento-->
-           <div id="talleres" class="info-curso ocultar clearfix ml-5 mt-5">
-              <div class="detalle-evento">
-                <h2>Angular</h2>
-                <p><i class="fas fa-clock mr-3 mt-4"></i>20:00 hrs</p>
-                <p><i class="fas fa-calendar mr-3 mt-4"></i>10 de Sept</p>
-                <p><i class="fas fa-user mr-3 mt-4"></i>Juan Pablo De la torre</p>
-              </div>
-              <a href="#" class="button float-left mb-4">Ver todos</a>
-           </div><!--cierre--segundo--evento-->
-         </div><!--cierre--segundo--evento-->
-         </div><!--cierre--programa--evento-->
-       </div><!--contenedor-->
-      </div><!--contenido--programa-->
-   </section> <!--cierre--section--2-->
+      <?php
+      try {
+        require_once('includes/funciones/bd_conexion.php');
+        $sql = "SELECT `evento_id`, `nombre_evento`, `fecha_evento`, `hora_evento`, `cat_evento`, `nombre_invitado`, `apellido_invitado` ";
+        $sql .= "FROM `eventos` ";
+        $sql .= "INNER JOIN `categoria_evento` ";
+        $sql .= "ON eventos.id_cat_evento=categoria_evento.id_categoria ";
+        $sql .= "INNER JOIN `invitados` ";
+        $sql .= "ON eventos.id_inv=invitados.invitado_id ";
+        $sql .= "AND eventos.id_cat_evento = 1 ";
+        $sql .= "ORDER BY `evento_id` LIMIT 2;";
+        $sql .= "SELECT `evento_id`, `nombre_evento`, `fecha_evento`, `hora_evento`, `cat_evento`, `nombre_invitado`, `apellido_invitado` ";
+        $sql .= "FROM `eventos` ";
+        $sql .= "INNER JOIN `categoria_evento` ";
+        $sql .= "ON eventos.id_cat_evento=categoria_evento.id_categoria ";
+        $sql .= "INNER JOIN `invitados` ";
+        $sql .= "ON eventos.id_inv=invitados.invitado_id ";
+        $sql .= "AND eventos.id_cat_evento = 2 ";
+        $sql .= "ORDER BY `evento_id` LIMIT 2;";
+        $sql .= "SELECT `evento_id`, `nombre_evento`, `fecha_evento`, `hora_evento`, `cat_evento`, `nombre_invitado`, `apellido_invitado` ";
+        $sql .= "FROM `eventos` ";
+        $sql .= "INNER JOIN `categoria_evento` ";
+        $sql .= "ON eventos.id_cat_evento=categoria_evento.id_categoria ";
+        $sql .= "INNER JOIN `invitados` ";
+        $sql .= "ON eventos.id_inv=invitados.invitado_id ";
+        $sql .= "AND eventos.id_cat_evento = 3 ";
+        $sql .= "ORDER BY `evento_id` LIMIT 2;";
+      } catch (Exception $e) {
+        $error = $e->getMessage();
+      }
+      ?>
 
-   <section class="invitados contenedor seccion">
-     <h2 class="nuestrosInvitados mt-5">Nuestros Invitados</h2>
-     <div class="container">
-      <div class="card-deck">
-          <div class="card invitado">
-            <img class="card-img-top imgClass" src="img/persona4.jpg" alt="Card image cap">
+      <?php $conn->multi_query($sql); ?>
 
-            <div class="card-footer textoInvitados2">
-              <small class="text-muted textoInvitados"><span class="spanText">Susana González</small></span>
-            </div>
-          </div>
-          <div class="card invitado">
-            <img class="card-img-top imgClass" src="img/persona5.jpg" alt="Card image cap">
+      <?php
+      do {
+        $resultado = $conn->store_result();
 
-            <div class="card-footer textoInvitados2">
-              <small class="text-muted textoInvitados"><span class="spanText"> Raquel Hernández</small></span>
-            </div>
-          </div>
-          <div class="card invitado">
-            <img class="card-img-top imgClass" src="img/persona3.jpg" alt="Card image cap">
+        ?>
 
-            <div class="card-footer textoInvitados2">
-              <small class="text-muted textoInvitados"><span class="spanText"> Felipe Rodríguez</small></span>
-            </div>
-          </div>
-        </div>
-        </div><!--cierre--container-->
-   </section>
-   <div class="dummy_page"></div>
+      <?php $i = 0; ?>
+      <?php while ($evento = $resultado->fetch_assoc()) : ?>
+      <?php
+      if ($i % 2 == 0) { ?>
+      <div id="<?php echo strtolower($evento['cat_evento']) ?>" class="info-curso ocultar clearfix">
+      <?php 
+    } ?>
+      <div class="detalle-evento">
+      <h3><?php echo html_entity_decode($evento['nombre_evento']) ?></h3>
+      <p><i class="fa fa-clock-o" aria-hidden="true"></i> <?php echo $evento['hora_evento']; ?></p>
+      <p><i class="fa fa-calendar" aria-hidden="true"></i> <?php echo $evento['fecha_evento']; ?></p>
+      <p><i class="fa fa-user" aria-hidden="true"></i> <?php echo $evento['nombre_invitado'] . " " . $evento['apellido_invitado']; ?></p>
+      </div>
+      <?php if ($i % 2 == 1) : ?>
+      <a href="calendario.php" class="button float-right">Ver todos</a>
+      </div> <!--#talleres-->
+      <?php endif; ?>
+      <?php $i++; ?>
+      <?php endwhile; ?>
+      <?php $resultado->free(); ?>
+      <?php 
+    } while ($conn->more_results() && $conn->next_result()); ?>
 
-   <section class="invitados contenedor seccion">
-      <div class="container">
-       <div class="card-deck">
-           <div class="card invitado">
-             <img class="card-img-top imgClass" src="img/persona6.jpg" alt="Card image cap">
-             <div class="card-footer textoInvitados2">
-               <small class="text-muted textoInvitados"><span class="spanText"> Emilia Gómez</small></span>
-             </div>
-           </div>
-           <div class="card invitado">
-             <img class="card-img-top imgClass" src="img/persona2.jpg" alt="Card image cap">
-             <div class="card-footer textoInvitados2">
-               <small class="text-muted textoInvitados"><span class="spanText">Pedro Herrera</small></span>
-             </div>
-           </div>
-           <div class="card invitado">
-             <img class="card-img-top imgClass" src="img/persona1.jpg" alt="Card image cap">
-             <div class="card-footer textoInvitados2">
-               <small class="text-muted textoInvitados"><span class="spanText"> Rafael Bautista</small></span>
-             </div>
-           </div>
-         </div>
-        </div> <!--cierre--container--2-->
-    </section>
+          </div> <!--.programa-evento-->
+         </div> <!--.contenedor-->
+        </div><!--.contenido-programa-->
+      </section> <!--.programa-->
+
+     <?php include_once 'includes/templates/invitados.php'; ?>     
 
     <div class="dummy_page"></div>
 
@@ -112,8 +117,9 @@
         </ul>
       </div>
     </div>
+
+  <h2>Precios</h2>
   <div class="container">
-    <h2>Precios</h2>
     <div class="card-deck text-center mt-5">
       <div class="card classcard">
         <div class="card-body">
@@ -123,7 +129,7 @@
           <h5 class="card-title"><i class="fas fa-check mr-2 checkclass"></i>TODOS LOS TALLERES</h5>
         </div>
         <div class="card-footer">
-            <a href="#" class="btn btn-primary btnprecio">COMPRAR</a>
+            <a href="registro.php" class="btn btn-primary btnprecio">COMPRAR</a>
         </div>
       </div>
       <div class="card classcard">
@@ -134,32 +140,33 @@
           <h5 class="card-title"><i class="fas fa-check mr-2 checkclass"></i>TODOS LOS TALLERES</h5>
         </div>
         <div class="card-footer">
-            <a href="#" class="btn btn-primary btnprecio">COMPRAR</a>
+            <a href="registro.php" class="btn btn-primary btnprecio">COMPRAR</a>
         </div>
       </div>
       <div class="card classcard">
         <div class="card-body">
             <h5 class="card-title pasesclass">TICKET POR DOS DÍAS</h5>
-          <h5 class="card-title classPrecio">45€</h5>
-          <h5 class="card-title"><i class="fas fa-check mr-2 checkclass"></i>TODAS LAS CONFERENCIAS</h5>
-          <h5 class="card-title"><i class="fas fa-check mr-2 checkclass"></i>TODOS LOS TALLERES</h5>
+             <h5 class="card-title classPrecio">45€</h5>
+             <h5 class="card-title"><i class="fas fa-check mr-2 checkclass"></i>TODAS LAS CONFERENCIAS</h5>
+             <h5 class="card-title"><i class="fas fa-check mr-2 checkclass"></i>TODOS LOS TALLERES</h5>
+          </div>
+          <div class="card-footer">
+            <a href="registro.php" class="btn btn-primary btnprecio">COMPRAR</a>
+          </div>
         </div>
-        <div class="card-footer">
-            <a href="#" class="btn btn-primary btnprecio">COMPRAR</a>
-        </div>
-      </div>
+      </div> 
+    </div><!--cierre--container--precios-->
+ 
+
+     <div class="ubicacion mt-4">
+         <h2>Ubicación del evento</h2>
     </div>
-  </div><!--cierre--container--precios-->
-
-  <!-- <div id="mapa" class="mapa">
-
-  </div> -->
-
+   <div class="container mapa" id="map"></div>
 
   <div class="newsletter parallax mt-5">
     <div class="contenido contenedor">
       <p>Regístrate a Pro Coders</p>
-      <h3>ProCoders &nbsp; &LT; &sol; &gt;</h3>
+      <h1 class="display-1 mb-4">ProCoders &nbsp; &LT; &sol; &gt;</h1>
       <a href="#" class="button transparente">Registro</a>
     </div>
   </div>

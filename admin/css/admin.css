@@ -1,0 +1,20 @@
+.user-panel {
+    height: 60px;
+}
+
+.user-panel>.info {
+    position: relative;
+    left: auto;
+}
+.skin-blue .sidebar-menu > li.header {
+    color: white;    
+}
+.login-page .main-footer {
+    display: none;
+}
+.skin-blue .main-header .navbar {
+    background-color: #2d46d2;
+}
+.skin-blue .main-header .logo {
+    background-color: #2d46d2;
+}

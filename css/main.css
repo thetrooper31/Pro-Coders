@@ -1,37 +1,9 @@
 
-
-
-
-
-
-
-/*
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-  vertical-align: middle;
-}
-
-/*
- * Remove default fieldset styles.
- */
-
 fieldset {
   border: 0;
   margin: 0;
   padding: 0;
 } */
-
-/*
- * Allow only vertical resizing of textareas.
- */
-
-
-
-
 
 /* ==========================================================================
    ESTILOS GLOBALES
@@ -42,7 +14,7 @@ fieldset {
 *,
 *:before,
 *:after {
-  /*propiedad que nos permite cambiar el modelo de caja y ajustarlo a nuestras necesidades*/
+
   box-sizing: inherit;
 }
 
@@ -57,12 +29,22 @@ h2 {
   text-align: center;
 }
 
+h2::after {
+  content: '';
+  margin: 0 auto;
+  background-image: url(../img/separador.png);
+  height: 30px;
+  width: 100px;
+  display: block;
+}
+
 h3 {
   font-size: 2.0em;
   font-family: 'PT Sans', sans-serif;
-  text-align: center;
-  color: #2d46d2;
+  text-align: left;
+  color: black;
 }
+
 
 
 /* ==========================================================================
@@ -93,6 +75,7 @@ div.contenido-header {
 
 nav.redes-sociales {
   text-align: center;
+  margin-right: 167px;
 }
 
 nav.redes-sociales a {
@@ -144,6 +127,8 @@ p.ciudad {
 h1.nombre-sitio {
   font-family: 'PT Sans', sans-serif;
   font-size: 5.9vw;
+  margin: 10px;
+  color: #ddff2e;
 }
 
 p.slogan {
@@ -174,6 +159,9 @@ p.slogan span {
   font-size: 1.5em;
 
 }
+.bg-dark {
+  background-color: #0a2cea !important;
+}
 
 .nombrebarra {
   font-size: 1.8em;
@@ -188,17 +176,6 @@ p.slogan span {
    ========================================================================== */
 
 
-
-
-h2::after {
-  content: '';
-  margin: 0 auto;
-  background-image: url(../img/separador.png);
-  height: 30px;
-  width: 100px;
-  display: block;
-  ;
-}
 .sectionClass p {
     font-size: 1.2em;
     text-align: center;
@@ -209,7 +186,6 @@ section.programa {
 div.contenedor-video {
     max-width: 100%;
     overflow-x: hidden;
-
 }
 /* div.contenedor-video video {
     width: 100%;
@@ -225,19 +201,47 @@ div.contenido-programa {
 nav.menu-programa {
   width: 100%;
   border-bottom: 1px solid #2d46d2;
-  padding-bottom: 10px;
+  padding-bottom: 0px;
+}
+
+nav.menu-programa a {
+    display: block;
+    text-align: center;
+    color: #000000;
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    position: relative;
+    padding-bottom: 10px;
+}
+nav.menu-programa a.activo::after {
+  position: absolute;
+  content: '';
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  height: 20px;
+  width: 30px;
+  background-image: url(../img/talleres-flecha.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  bottom: -20px;
+
 }
 div.programa-evento {
     background-color: rgba(255, 255, 255, .8);
     padding: 15px;
+    margin-top: 100px;
 }
 @media only screen and (min-width:768px) {
-  div.programa-evento{
+  div.programa-evento {
     width: 70%;
   }
 }
 @media only screen and (min-width:992px) {
-  div.programa-evento{
+  div.programa-evento {
     width: 50%;
   }
 }
@@ -260,23 +264,29 @@ div.programa-evento {
    ========================================================================== */
 
 nav.menu-programa {
-    width: 96.5%;
-    border-bottom: 2px solid #2d46d2;
-    padding-bottom: 5px;
+    width: 101.7%;
+    border-bottom: 1px solid #2d46d2;
+    padding-bottom: 0px;
+    
 }
-nav.menu-programa a {
-    color: #000000;
-    text-decoration: none;
-    font-family: 'Oswald', sans-serif;
-    font-size: 1.4em;
-    text-align: center;
-}
-nav.menu-programa a i {
+
+nav.menu-programa a i,
+div.detalle-evento p {
     color: #2d46d2;
     font-size: 1.5em;
+    margin-right: 10px;
+}
+div.detalle {
+  margin-top: 20px;
+  border-bottom: 1px solid black;
+  padding: 0 20px;
 }
 div.detalle-evento p {
+  margin-bottom: 20px;
   font-size: 20px;
+}
+div.detalle:nth-child(2){
+  border: none;
 }
 div.detalle-evento p i {
   color: #2d46d2;
@@ -304,6 +314,12 @@ div.detalle-evento p i {
   text-align: center;
   box-sizing: border-box;
   padding: 60px 0px;
+}
+.navbarMenu .activo {
+  border-bottom: 2px solid #fe4918;
+}
+div.ocultar {
+  display: none;
 }
 
    /* ==========================================================================
@@ -340,6 +356,67 @@ div.detalle-evento p i {
   -webkit-filter: grayscale(0);
   -webkit-transform: scale(1.1);
 }
+
+/*invitados2**/
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ul.lista-invitados li {
+  padding: 85px;
+  float: left;
+}
+@media only screen and (min-width:480px) {
+  ul.lista-invitados li {
+    width: 50%;
+  }
+}
+@media only screen and (min-width:768px) {
+  ul.lista-invitados li {
+    width: 33.3%;
+  }
+}
+div.invitados2 {
+  position: relative;
+  overflow: hidden;
+}
+div.invitados2 img {
+  max-width: 100%;
+  filter:gray;
+  -webkit-filter: grayscale(1);
+  -webkit-transition: all .5s ease-in-out;
+}
+div.invitados2:hover img {
+  -webkit-filter: grayscale(0);
+  -webkit-transform: scale(1.1);
+}
+div.invitados2 p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 15px 10px;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.65);
+  width: 97%;
+  text-align: left;
+  font-family: 'Oswald', sans-serif;
+  color: white;
+  text-transform: uppercase;
+  -webkit-transition: all .5s ease-in-out;
+}
+
+div.invitados2:hover p {
+  bottom: -80px;
+  opacity: 0;
+}
+
+
+div.cboxElement {
+  padding: 30px !important;
+  text-align: center;
+}
+
 
  /* ==========================================================================
     FIN ESTILOS INVITADOS
@@ -526,13 +603,7 @@ form.registro label {
   margin-bottom: 5px;
   font-weight: bold;
 }
-h4 {
-  text-align: center;
-  text-transform: uppercase;
-  border-bottom: 2px solid #2d46d2;
-  padding-bottom: 10px;
-  font-size: 1.2em;
-}
+
 div.caja {
   background-color:white;
   border: 1px solid #e1e1e1;
@@ -595,7 +666,6 @@ div.campo {
 }
 div.resumen div.extras {
   float: left;
-  width: 50;
   padding: 30px;
 }
 div.extras div.orden {
@@ -611,7 +681,7 @@ div.extras div.orden input {
   height: 120px;
 }
 #suma-total {
-  font-size: 1.5em;
+  font-size: 1.9em;
   color: #2d46d2;
 }
 /* .ptotal {
@@ -637,11 +707,52 @@ div.extras div.orden input {
 
 
 
+ /* ==========================================================================
+   ESTILOS CALENDARIO
+   ========================================================================== */
+div.calendario::after {
+  clear: both;
+  display: block;
+  content: '';
+}
 
-
-
-
-
+div.dia {
+  width: 50%;
+  float: left;
+  border: 2px solid #e1e1e1;  
+  transition: all .3s ease;
+  padding-left: 40px;
+}
+@media only screen and (min-width:768px) {
+  div.dia {
+    width: 33.3%;
+    min-height: 240px;
+    padding-top: 20px;
+    }
+}
+div.dia:hover {
+  background-color: #e1e1e1; 
+  -webkit-transform: scale(1.1);
+}
+div.dia p.titulo {
+    color: #2d46d2;  
+    text-transform: uppercase;
+    font-weight: bold;
+}
+div.dia p {
+  font-size: 1em;
+}
+div.dia i {
+  color: #2d46d2;
+  font-size: 1.5em;
+}
+div.calendario h3{
+  background-color: #2d46d2;
+  clear: both;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
 
 
 

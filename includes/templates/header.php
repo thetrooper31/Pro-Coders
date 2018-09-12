@@ -1,10 +1,10 @@
-<!doctype html>
-<html class="" lang="es">
+<!DOCTYPE html>
+<html lang="es-es" >
 
 <head>
 
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <?php header('Content-Type: text/html; charset=AddCharset UTF-8 .php'); ?>
+  
   <!-- <meta http-equiv="x-ua-compatible" content="ie=edge"> -->
   <title></title>
   <meta name="description" content="">
@@ -18,10 +18,23 @@
   <link rel="stylesheet" href="css/fontawesome-all.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald|PT+Sans" rel="stylesheet">
   <link rel="stylesheet" href="css/leaflet.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/main.css">
+  <?php
+      $archivo = basename($_SERVER['PHP_SELF']);
+      $pagina = str_replace(".php", "", $archivo);
+      if($pagina == 'invitados' || $pagina == 'index'){
+        echo '<link rel="stylesheet" href="css/colorbox.css">';
+      } else if($pagina == 'conferencia') {
+        echo '<link rel="stylesheet" href="css/lightbox.css">';
+      }
+  ?>
+    
+  
+  
 </head>
 
-<body>
+<body class="<?php echo $pagina; ?>">
   <header class="site-header">
     <div class="hero">
       <div class="contenido-header">
@@ -33,10 +46,10 @@
         </nav><!--cierre-redes-sociales-->
         <div class="informacion-evento">
           <div class="clearfix">
-              <p class="ciudad"><i class="fas fa-map-marker-alt mr-2"></i>Próximo Madrid</p>
-              <p class="fecha"><i class="far fa-calendar-alt mr-2"></i> 10-12 Dic</p>
+              <p class="ciudad"><i class="fas fa-map-marker-alt mr-2"></i>Próximo Málaga</p>
+              <p class="fecha"><i class="far fa-calendar-alt mr-2"></i> 28-29 y 30 de Sept.</p>
           </div>
-          <h1 class="nombre-sitio">ProCoders&nbsp; &LT; &sol; &gt;</h1>
+          <h1 class="nombre-sitio mt-5">ProCoders&nbsp; &LT; &sol; &gt;</h1>
           <p class="slogan">Tú página de <span>conferencias web</span></p>
         </div>
       </div><!--cierre-contenido-header-->
@@ -50,8 +63,8 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-item nav-link active" href="#">Conferencia <span class="sr-only">(current)</span></a>
+      <div class="navbar-nav navbarMenu">
+        <!-- <a class="nav-item nav-link active" href="#">Conferencia <span class="sr-only">(current)</span></a> -->
         <a class="nav-item nav-link" href="calendario.php">Calendario</a>
         <a class="nav-item nav-link" href="invitados.php">Invitados</a>
         <a class="nav-item nav-link" href="registro.php">Reservas</a>

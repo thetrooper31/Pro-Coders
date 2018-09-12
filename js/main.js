@@ -1,24 +1,18 @@
 (function () {
     "use strict";
+
+  
     
       var regalo = document.getElementById('regalo');
       var regalo = document.getElementById('regalo');
       
       document.addEventListener('DOMContentLoaded', function () {
 
-      //Mapa
-      // var map = L.map('mapa').setView([36.720139, -4.422598], 17);
-
-      //   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      //       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-      //   }).addTo(map);
-
-      //   L.marker([36.720139, -4.422598]).addTo(map)
-      //       .bindPopup('ProCoders')
-      //       .openPopup();
+      
 
 
-
+      
+    
       //Seleccionamos elemento por id       Campos Datos Usuario
       var nombre = document.getElementById('nombre');
       var apellido = document.getElementById('apellido');
@@ -34,16 +28,19 @@
       var lista_productos = document.getElementById('lista-productos')
       var suma = document.getElementById('suma-total');
       
-
+      // botonRegistro.disabled = true;  
 
       //regalos
       // var camisas = document.getElementById('camisa-evento');
       var etiquetas = document.getElementById('etiquetas');
 
+      
       calcular.addEventListener('click', calcularMontos); //capturo el evento click
       pase_dia.addEventListener('blur', mostrarDias);// evento que guarda el valor introducido en el input
       pase_dosdias.addEventListener('blur', mostrarDias);
       pase_completo.addEventListener('blur', mostrarDias);
+
+
 
 
       //validacion formulario
@@ -52,7 +49,7 @@
       email.addEventListener('blur', validarCampos);
       email.addEventListener('blur', validarMail);
 
-       function validarCampos(){ // funcion anonima para validar formulario
+       function validarCampos(){  // función anónima para validar formulario 
         if(this.value == '') {
           errorDiv.style.display= 'block';
           errorDiv.innerHTML ="este campo es obligatorio";
@@ -75,6 +72,9 @@
         }
       }
 
+    
+
+
       function calcularMontos(event){
         event.preventDefault();
         if(regalo.value == '') {  // funcion que confirma seleccion del regalo (value igual a nada = alert!)
@@ -84,7 +84,6 @@
           var boletosDia = pase_dia.value, // var que calcula la cantidad de tickets
               boletos2Dias = pase_dosdias.value,
               boletoCompleto = pase_completo.value,
-              // cantCamisas = camisas.value,
               cantEtiquetas = etiquetas.value;
           
           var totalPagar = (boletosDia * 30) + (boletos2Dias * 45) + (boletoCompleto * 50) + (cantEtiquetas * 2);
@@ -108,9 +107,10 @@
           for(var i = 0; i< listadoProductos.length; i++) {
             lista_productos.innerHTML += listadoProductos[i] +'<br/>';
           }
-         suma.innerHTML = "€" + totalPagar.toFixed(2); // pinto el total, uso toFixed 2 para un máximo de dos decimales (evita problemas al realizar cobros por tarjetas)
+         suma.innerHTML = totalPagar.toFixed(2) + ' ' + "€"; // pinto el total, uso toFixed 2 para un máximo de dos decimales (evita problemas al realizar cobros por tarjetas)
 
-                                                              
+         botonRegistro.disabled = false;  
+         document.getElementById('total_pedido').value = totalPagar;                                                   
 
         }
       }
@@ -137,6 +137,36 @@
        }
 
    }
+            
       
       );
+                 
     })(); 
+
+    $(function() {
+      $('.programa-evento .info-curso:first').show();
+      $('.menu-programa a:first').addClass('activo');
+      $('.menu-programa a').on('click', function(){
+          $('.menu-programa a').removeClass('activo');
+          $(this).addClass('activo');
+          $('.ocultar').hide();
+          var enlace = $(this).attr('href');
+          $(enlace).fadeIn(1000);
+          return false;
+      });
+
+      $('.invitado-info').colorbox({inline:true, width:"50%"});
+      $('.boton_newsletter').colorbox({inline:true, width:"50%"});
+      var map = L.map('map').setView([36.717825, -4.433418], 17);
+
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(map);
+      
+      L.marker([36.717825, -4.433418]).addTo(map)
+          .bindPopup('CodeSpace Academy<br> Calle Compositor Lehmberg Ruiz, 13')
+          .openPopup();
+          
+    });
+
+    

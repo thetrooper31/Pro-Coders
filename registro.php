@@ -1,24 +1,11 @@
 <?php include_once 'includes/templates/header.php'; ?>
+
    <section class="seccion contenedor">
-       <h2>Registro de Usuarios</h2>
-       <form id="registro" class="registro" action="" method="post">
-           <div id="datos_usuario" class="registro caja clearfix">
-                <div class="campo">
-                     <label for="nombre">Nombre:</label>
-                     <input type="text" id="nombre" name="nombre" placeholder="Tu nombre">
-                </div>
-                <div class="campo">
-                     <label for="apellido">Apellido:</label>
-                     <input type="text" id="apellido" name="apellido" placeholder="Tu apellido">
-                </div>
-                <div class="campo">
-                     <label for="email">Email:</label>
-                     <input type="email" id="email" name="email" placeholder="Tu Email">
-                </div>
-                <div id="errorDiv"></div>
-           </div><!--cierre-registro-->
+       
+       <form id="registro" class="registro" action="pagar.php" method="post">
+           
    <!--==========================================================================
-     FIN SECTION REGISTRO                
+     FIN SECTION FACTURACIÓN              
    ==========================================================================-->           
 
            <div id="paquetes" class="paquetes">
@@ -38,7 +25,8 @@
                     <div class="card-footer">
                         <div class="order">
                             <label for="pase_dia">Boletos deseados:</label>
-                            <input type="number" min="0" id="pase_dia" size="3" placeholder="0">
+                            <input type="number" min="0" id="pase_dia" size="3" name="boletos[un_dia][cantidad]" placeholder="0">
+                            <input type="hidden" value="30" name="boletos[un_dia][precio]">
                         </div>
                     </div>
                   </div>
@@ -52,7 +40,8 @@
                     <div class="card-footer">
                         <div class="order">
                              <label for="pase_completo">Boletos deseados:</label>
-                             <input type="number" min="0" id="pase_completo" size="3" placeholder="0">
+                             <input type="number" min="0" id="pase_completo" size="3" name="boletos[completo][cantidad]" placeholder="0">
+                             <input type="hidden" value="50" name="boletos[completo][precio]">
                         </div>
                     </div>
                   </div>
@@ -66,7 +55,8 @@
                     <div class="card-footer">
                           <div class="order">
                               <label for="pase_dosdias">Boletos deseados:</label>
-                              <input type="number" min="0" id="pase_dosdias" size="3" placeholder="0">
+                              <input type="number" min="0" id="pase_dosdias" size="3" name="boletos[2dias][cantidad]" placeholder="0">
+                              <input type="hidden" value="45" name="boletos[2dias][precio]"> 
                          </div>
                     </div>
                   </div>
@@ -146,7 +136,24 @@
                 </div> <!--#eventos-->
                 <div class="container-fluid">
                 <div id="resumen" class="resumen" class="resumen">
-                    <h3>PAGO Y EXTRAS</h3>
+                    <h2>Datos de facturación</h2>
+                    
+                    <div id="datos_usuario" class="registro caja clearfix">
+                <div class="campo">
+                     <label for="nombre">Nombre:</label>
+                     <input type="text" id="nombre" name="nombre" placeholder="Tu nombre">
+                </div>
+                <div class="campo">
+                     <label for="apellido">Apellido:</label>
+                     <input type="text" id="apellido" name="apellido" placeholder="Tu apellido">
+                </div>
+                <div class="campo">
+                     <label for="email">Email:</label>
+                     <input type="email" id="email" name="email" placeholder="Tu Email">
+                </div>
+                <div id="errorDiv"></div>
+           </div><!--cierre-registro-->
+           <h3>PAGO Y EXTRAS</h3>
                     <div class="caja clearfix">
                         <div class="extras">
                             <!-- <div class="orden">
@@ -154,15 +161,16 @@
                                 <input type="number" min="0" id="camisa_evento" size="3" placeholder="0">
                             </div> cierre--order1 -->
                         <div class="orden">
-                                <label for="etiquetas">Paquete de 10 etiquetas 2€&nbsp<small>(HTML5, CSS3, JavaScript)</small></label><br>
-                                <input type="number" min="0" id="etiquetas" size="3" placeholder="0">
+                                <label for="etiquetas">Paquete de 10 pegatinas 2€&nbsp<small>(HTML5, CSS3, JavaScript)</small></label><br>
+                                <input type="number" min="0" id="etiquetas" name="pedido_extra[etiquetas][cantidad]" size="3" placeholder="0">
+                                <input type="hidden" value="2" name="pedido_extra[etiquetas][precio]">
                            </div><!--cierre--order2-->
                            <div class="orden">
                                <label for="regalo">Seleccione un regalo</label> <br>
-                               <select id="regalo" required>
+                               <select id="regalo" name="regalo" required>
                                    <option value="">--Seleccione un regalo--</option>
-                                   <option value="ETI">Etiquetas</option>
-                                   <option value="ETI">Pulsera</option>
+                                   <option value="2">1 Cerveza</option>
+                                   <option value="1">1 Gaseosa</option>
                                </select>
                            </div><!--cierre--order3-->
                            <input type="button" id="calcular" class="button" value="Calcular">
@@ -174,8 +182,13 @@
                             <p>Total:</p>
                             <div id="suma-total">                                
                             </div>
-                                <input id="btnRegistro" type="submit" class="button" value="Pagar">
+                                <input type="hidden" name="total_pedido" id="total_pedido">
+                                <input id="btnRegistro" type="submit" name="submit" class="button" value="Pagar">
                             </div><!--cierre--total-pagar-->
+                            <p>Métodos de pago aceptados:</p>
+                            <div class="paypalImg mt-4">
+                                <img src="img/paypal2.jpg">                              
+                            </div>
                     </div><!--cierre--caja-->
                 </div><!--cierre--resumen-->
               </div>
